@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">	
+	<!-- 
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    -->
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	
+	<meta name="description" content="Sharing ten favorite things in any subject">
+	<meta name="keywords" content="share10, s10, share ten">
+
+    <title>Share 10</title> 
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <script src="app/lib/jquery/jquery-1.11.1.min.js"></script>  
+	<script src="app/lib/jquery/jquery.mobile.custom.min.js"></script>
+    
+    <!-- Misc Libraries -->
+    <script src='app/lib/misc/fastclick.min.js'></script>
+    <script src='app/lib/misc/inobounce.min.js'></script>    
+    
+    <!-- Bootstrap -->
+    <link href="app/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" >
+    <script src="app/lib/bootstrap/js/bootstrap.min.js"></script>
+    
+    <!-- SA Libs -->
+ 	<script src="app/lib/sa/sa.min.js"></script>    
+    <link  href="app/lib/sa/sa.comp.css" rel="stylesheet" >
+
+	<!-- Application source -->
+	<script src="app/lib/app/app.min.js"></script>
+</head>
+
+<body>      
+	<script>
+	$(function() {
+		// attach fastclick to document          
+    	FastClick.attach(document.body);    	
+	});
+    </script>
+    
+	<script type="text/javascript">
+		$(document).ready(function() {		
+			// load the main app and bind all its UI to the element with "page" id
+			SA.loadComponent ( 'page', 'App.MainApp' );
+		});	
+	</script>
+	
+	<!-- Pages -->
+	<div id="page" style="width:100%; margin: 0 auto; " ></div>
+	
+</body>
+
+</html>

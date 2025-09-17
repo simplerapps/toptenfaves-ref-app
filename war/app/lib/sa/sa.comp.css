@@ -1,0 +1,149 @@
+/** Load Lato font from local file **/
+
+@font-face {
+	font-family: 'Open Sans';
+	src: url("OpenSans-Regular.ttf");
+}
+body {
+	font-family: 'Open Sans', sans-serif;
+    /*font-family: Arial, sans-serif;*/
+    color: #505050;
+    background-color:#F0F0F0;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Open Sans', sans-serif;
+   	/* font-family: Arial, sans-serif; */
+}
+p, div {
+	font-family: 'Open Sans', sans-serif;
+    /* font-family: Arial, sans-serif; */
+}
+a {
+   color: #888888;
+   text-decoration: none!important;
+   outline: 0;
+}
+a:hover {
+    color: #29a329;
+}
+a:focus {
+   outline: 0;
+}
+
+input[type='file'] {
+	font-size: 90%;
+	color: gray; 
+}
+
+textarea:focus, input:focus, input[type]:focus, .uneditable-input:focus {   
+	border: 1px solid gray !important;
+    outline: 0 none;
+}
+
+pre {
+	/* Set tab size to 3 spaces for different browsers */
+  	tab-size: 3; 
+  	-moz-tab-size: 3;
+	-o-tab-size: 3;
+}
+
+textarea {
+	/* Set tab size to 3 spaces for different browsers */
+  	tab-size: 3; 
+  	-moz-tab-size: 3;
+	-o-tab-size: 3;
+}
+
+
+/* Carousel styles */
+.carousel-control {
+    background-image: none !important; /* remove background gradients on controls */
+    width: 5% !important;
+}
+
+@media (min-width: 768px) {
+	.modal-body {
+	    position: relative;
+	    overflow-y: auto;
+	    height: 560px;
+	    padding: 15px;
+	}
+	.modal-wide .modal-dialog {
+		width: 85%; /* or whatever you wish */
+	}
+}
+/* Landscape phone to portrait tablet */ 
+@media (max-width: 767px) {
+	.modal-body {
+	    position: relative;
+	    overflow-y: auto;
+	    height: 560px;
+	    padding: 5px;
+	}
+	.modal-wide .modal-dialog {
+		width: 95%; /* or whatever you wish */
+	}	
+}
+@media (max-width: 480px) {
+	.modal-body {
+	    position: relative;
+	    overflow-y: auto;
+	    height: 400px;
+	    padding: 1px;
+	}
+	.modal-wide .modal-dialog {
+		width: 100%; /* or whatever you wish */
+	}
+}
+
+.fade {
+   opacity: 0;
+   -webkit-transition: opacity 0.10s linear;
+      -moz-transition: opacity 0.10s linear;
+       -ms-transition: opacity 0.10s linear;
+        -o-transition: opacity 0.10s linear;
+           transition: opacity 0.10s linear;
+}
+
+.form-control::-webkit-input-placeholder {
+	color: #D8D8D8; font-size: 100%;
+}
+
+.form-control {
+	border-radius: 5px !important;
+	box-shadow: none !important;
+	webkit-transition: none !important; 
+	transition: none !important;
+}
+
+input {
+    -webkit-appearance:none;  /* Remove default shadow */
+    
+}
+
+textarea {
+    -webkit-appearance:none;  /* Remove default shadow */
+}
+
+/* Animation for button busy */
+.glyphicon-refresh-animate {
+    -animation: spin 1s infinite linear;
+    -webkit-animation: spin2 1s infinite linear;
+}
+
+@-webkit-keyframes spin2 {
+    from { -webkit-transform: rotate(0deg);}
+    to { -webkit-transform: rotate(360deg);}
+}
+
+@keyframes spin {
+    from { transform: scale(1) rotate(0deg);}
+    to { transform: scale(1) rotate(360deg);}
+}
+
+/* Need to add this because of issue caused by div included in bootstrap rule. 
+It is too broad and breaks character width measurements for ace
+*/
+.ace_editor div {
+    font: inherit!important
+}

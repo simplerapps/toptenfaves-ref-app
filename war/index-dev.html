@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	
+	<meta name="description" content="Share top ten favorite things in any subject">
+	<meta name="keywords" content="share 10, share10, top ten faves, top 10">
+
+    <title>Share 10</title> 
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+   	<!-- JQuery: main jquery lib -->
+    <script src="app/lib/jquery/jquery-1.11.1.min.js"></script>  
+	<script src="app/lib/jquery/jquery.mobile.custom.min.js"></script>
+    
+    <!-- Bootstrap -->
+    <link href="app/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" >
+    <script src="app/lib/bootstrap/js/bootstrap.min.js"></script>
+    
+    <!-- Misc Libraries -->
+    <script src='app/lib/misc/fastclick.min.js'></script>
+    <script src='app/lib/misc/inobounce.min.js'></script>
+    
+	<!-- pg plugins -->
+	<!-- <script src='app/lib/require.js'></script> -->
+    <script src='cordova.js'></script>	
+    
+    <!-- SA Libs -->
+ 	<script src="app/lib/sa/sa.js"> </script>    
+    <link  href="app/lib/sa/sa.comp.css" rel="stylesheet" >
+    
+	<!-- Application source -->
+	<script type="text/javascript" src="app/comp/MainApp.js"></script>
+	<script type="text/javascript" src="app/comp/Login.js"></script>
+	<script type="text/javascript" src="app/comp/Home.js"></script>	
+	<script type="text/javascript" src="app/comp/Util.js"></script>	
+	
+	<!-- Atom Components -->
+	<script type="text/javascript" src="app/comp/ui/BtnCircle.js"></script>
+	<script type="text/javascript" src="app/comp/ui/Button.js"></script>
+	<script type="text/javascript" src="app/comp/ui/EnumField.js"></script>
+	<script type="text/javascript" src="app/comp/ui/Variable.js"></script>
+	<script type="text/javascript" src="app/comp/ui/Message.js"></script>
+	<script type="text/javascript" src="app/comp/ui/LoginComp.js"></script>	
+	<script type="text/javascript" src="app/comp/ui/TextArea.js"></script>
+	<script type="text/javascript" src="app/comp/ui/TextField.js"></script>
+	<script type="text/javascript" src="app/comp/ui/Loading.js"></script>
+	<script type="text/javascript" src="app/comp/ui/ShareComp.js"></script>
+	
+	<!-- List Components -->
+	<script type="text/javascript" src="app/comp/ui/AppBannerS.js"></script>	
+	<script type="text/javascript" src="app/comp/ui/Card.js"></script>	
+	<script type="text/javascript" src="app/comp/ui/CardPanel.js"></script>
+	<script type="text/javascript" src="app/comp/ui/Dialog.js"></script>
+	<script type="text/javascript" src="app/comp/ui/FormHandler.js"></script>
+	<script type="text/javascript" src="app/comp/ui/ListsPage.js"></script>
+	<script type="text/javascript" src="app/comp/ui/ListsManager.js"></script>	
+	<script type="text/javascript" src="app/comp/ui/ItemsDialogs.js"></script>
+	<script type="text/javascript" src="app/comp/ui/ShareDialogs.js"></script>	
+	<script type="text/javascript" src="app/comp/ui/ListDialogs.js"></script>
+	<script type="text/javascript" src="app/comp/ui/LToolBar.js"></script>
+	<script type="text/javascript" src="app/comp/ui/UploadBrowser.js"></script>
+	<script type="text/javascript" src="app/comp/ui/TopTB.js"></script>
+	<script type="text/javascript" src="app/comp/ui/Comments.js"></script>
+	<script type="text/javascript" src="app/comp/ui/Feedback.js"></script>	
+	<script type="text/javascript" src="app/comp/ui/LinkFrame.js"></script>
+	<script type="text/javascript" src="app/comp/ui/ImagesPanel.js"></script>	
+</head>
+
+<body>       
+	<script>
+	$(function() {
+		// attach fastclick to document          
+    	FastClick.attach(document.body);    	
+	});
+    </script>
+    
+	<script type="text/javascript">
+		$(document).ready(function() {
+			// load the main app and bind all its UI to the element with "page" id
+			SA.loadComponent ( 'page', 'App.MainApp' );
+		});	
+	</script>
+
+    <!-- Etc resource for page 
+    <div id="page-etc" ></div>
+    -->
+
+	<!-- Pages -->
+	<div id="page" style="width:100%; margin: 0 auto;" ></div>
+	
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+/** Load Lato font from local file **/
+
+body {
+    font-family: sans-serif;
+    color: #505050;
+    background-color:#F9F9F9;
+}
+h1, h2, h3, h4, h5, h6 {
+   	font-family: sans-serif;
+}
+p, div {
+    font-family: sans-serif; 
+}
+a {
+   color: #888888;
+   text-decoration: none!important;
+   outline: 0;
+}
+a:hover {
+    color: #29a329;
+}
+a:focus {
+   outline: 0;
+}
+

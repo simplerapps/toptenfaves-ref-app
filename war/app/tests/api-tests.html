@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- JavaScript plugins (requires jQuery) -->
+    <script src="lib/jquery-1.10.2.min.js"></script>    
+    
+    <!-- Bootstrap -->
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" >
+    
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    
+    <!-- hq apps core  -->  
+	<script type="text/javascript" src="hqapps/src/hqa/Hqapps.js"></script>
+	<script type="text/javascript" src="hqapps/src/hqa/Loader.js"></script>
+	<script type="text/javascript" src="hqapps/src/hqa/Comps.js"></script>
+	<script type="text/javascript" src="hqapps/src/hqa/Events.js"></script>
+	<script type="text/javascript" src="hqapps/src/hqa/Res.js"></script>
+	<script type="text/javascript" src="hqapps/src/hqa/Store.js"></script>
+	<script type="text/javascript" src="hqapps/src/hqa/Validate.js"></script>
+	
+</head>
+
+
+<body>
+
+<script>
+    /**
+     * User data model definition related to this component
+    var model = 
+   	 {name:'user-model', label:'User', items: 
+   		 [
+   		  {ac:'Id', name:'id', label:'User Id', vpat:'s' },
+   		  {ac:'Name', name:'name', label:'Name', vpat:'r' },
+   		  {ac:'Email', name:'email', label:'Email', vpat:'r' },
+   		  {ac:'Password', name:'pass', label:'Password', vpat:'r' },
+   		  {ac:'CreatedOn', name:'created', label:'Created Date', vpat:'s' },
+   		  {ac:'ModifiedOn', name:'modified', label:'Modified Date', vpat:'s' }              
+   		  ]};    		  
+
+	HQA.comps.putList ( model );
+	
+	// data object
+	var obj = { "name":"Sami Adranly", "email":"sami@yahoo.com", "pass":"password123!" };
+	var id = HQA.store.set ( "user-model", obj );
+	console.debug ( id );
+
+	var atomsList = [
+		 {name:'lgMsg', html:'span', class:'label label-warning', value:'' },
+		 {html:'div', style:'height:10px;'},
+		 {name:'lgEmail', ac:'HQA.TextField', info:'Email address', required:'true', pattern:'email' },
+		 {name:'lgPassword', ac:'HQA.TextField', info:'Password', required:'true', pattern:'text',
+			 config:{type:'password'}},
+		 
+		 {cmd:'cmdLogin', ac:'HQA.Button', label:'Login', config:{style:'default'}},
+		 {cmd:'cmdShowForgot', ac:'HQA.Button', label:'Forgot Password?' },
+		 {cmd:'cmdShowCreate', ac:'HQA.Button', label:'New User?' }		 
+	]
+	
+	var dataObj = { lgEmail:'sami@yahoo.com', lgPassword: '' };
+	*/
+	
+	var key1 = window.localStorage.setItem("key", "value");
+	
+	var value = window.localStorage.getItem("key");	
+	
+	window.localStorage.removeItem("key");
+	
+
+</script>
+
+	
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<!-- <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=2"> --> 
+	
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+   	<!-- JQuery: main jquery lib -->
+	<!-- 
+	<link rel="stylesheet" href="lib/jquery/jquery.mobile-1.4.5.min.css"> 
+	-->
+    <script src="../lib/jquery/jquery-1.11.1.min.js"></script>  
+	<script src="../lib/jquery/jquery.mobile-1.4.5.min.js"></script>
+    
+    <!--  
+    <script src="../lib/jquery/jquery-ui-1.11.1.min.js"></script>   
+    <script src="../lib/jquery/jquery-ui-touch-punch.js"></script> 
+    -->
+
+    <!-- Bootstrap -->
+    <link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" >
+    <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+    
+    <!-- Fastclick -->
+    <script src='../lib/fastclick/fastclick.min.js'></script>
+    
+    <!-- SA Libs -->
+ 	<script src="../lib/sa/sa.js"> </script>
+ 	
+ 	<script>
+	var App = {};
+ 	</script>
+ 	
+ 	<script src="../comp/ui/PageFlipper.js"> </script>
+ 	
+</head>
+
+<body>       
+	<script>
+	$(function() {
+		// attach fastclick to document          
+    	FastClick.attach(document.body);    	
+	});
+    </script>
+    
+	<script type="text/javascript">
+		$(document).ready(function() {
+			// Hide silly JQM loading message
+			$(".ui-loader").hide();
+
+			// load the main app and bind all its UI to the element with "page" id
+			SA.loadComponent ( 'page', 'App.PageFlipper', {
+				pages: [
+					{title:'Sharing Shaved Ice in Maui Hawaii', img:'/app/res/img/share10-pic.jpg'},
+					{title:'Page 2', img:'/app/res/img/sf-sculpt.jpg'},
+					{title:'Page 3', img:'/app/res/img/chicago-sculpt.jpg'}
+				]
+			});
+		});
+	</script>
+
+
+	<!-- The whole app UI goes here -->
+	<div style="margin-top:20px;margin-left:20px;width:90%;">
+		<div id="page" style="width:100%; margin: 0 auto;">
+		</div>
+	</div>
+	
+</body>
+
+</html>
